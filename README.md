@@ -1,1 +1,0 @@
-# FrontEnd---Personal-Meeting-Scheduling-Platform

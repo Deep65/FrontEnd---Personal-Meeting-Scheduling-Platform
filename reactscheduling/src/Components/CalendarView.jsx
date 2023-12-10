@@ -62,7 +62,7 @@ const CalendarView = () => {
     <Container style={{ minWidth: '600px' }}>
       <Paper elevation={3} style={{ padding: '20px' }}>
         <Typography variant="h4" gutterBottom>
-          Calendar View
+          Book Slot
         </Typography>
         <TableContainer>
           <Table>

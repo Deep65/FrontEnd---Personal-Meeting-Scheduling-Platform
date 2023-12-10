@@ -33,7 +33,7 @@ function MyCalendar() {
 
   return (
     <div>
-    <h1>Demo App</h1>
+    <h1>List Events</h1>
     <FullCalendar
       plugins={[dayGridPlugin]}
       initialView='dayGridMonth'

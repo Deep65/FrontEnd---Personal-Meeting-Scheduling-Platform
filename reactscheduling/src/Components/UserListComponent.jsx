@@ -7,6 +7,7 @@ import TableBody from '@mui/material/TableBody';
 import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
 import { useNavigate } from 'react-router-dom';
+import { Typography } from '@mui/material';
 
 const styles = {
   container: {
@@ -34,12 +35,15 @@ function UserListComponent() {
     const navigate = useNavigate()
   // Sample user data
   const users = [
-    { id: 1, name: 'User 1' },
-    { id: 2, name: 'User 2' },
-    { id: 3, name: 'User 3' },
+    { id: 1, name: 'Deep Gandhi' },
+    { id: 2, name: 'Titus Varghase' },
+    { id: 3, name: 'Jay Parikh' },
     // Add more users as needed
   ];
 
+  const schedule=()=>{
+    nav('/schedulemeet')
+  }
   return (
     <div style={styles.container}>
       <div style={styles.header}>
@@ -55,15 +59,17 @@ function UserListComponent() {
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>ID</TableCell>
+           
             <TableCell>Name</TableCell>
+            <TableCell>Action</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {users.map((user) => (
             <TableRow key={user.id}>
-              <TableCell>{user.id}</TableCell>
+              
               <TableCell>{user.name}</TableCell>
+              <TableCell><Typography style={{cursor:'pointer',color:'blue'}}onClick={()=> navigate('/schedulemeet')}>Schedule</Typography></TableCell>
             </TableRow>
           ))}
         </TableBody>
